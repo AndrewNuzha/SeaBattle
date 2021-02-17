@@ -20,6 +20,8 @@ During the game, you must choose the coordinates of the cells of the enemy field
 You cannot select cells outside the field, you cannot select the same cells multiple times.\
 As like with the placement of ships, you must select the coordinates of the cells of the enemy field in the format:\
 'A 3' (where A is line index and 3 is row index).
+### Setup:
+Run .jar file 'seaBattle-1.1.jar'
 
 **Have fun ;)**
 
