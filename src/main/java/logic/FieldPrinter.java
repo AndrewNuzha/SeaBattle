@@ -60,7 +60,7 @@ public class FieldPrinter {
      */
     private void printDoubleFieldHead() {
         System.out.println();
-        System.out.println("\t\t\tPlayers field \t\t\t\t\t\tComputer field\n");
+        System.out.println("\t   Players field \t\t\t   Computer field\n");
         for (int i = 0; i < fieldSize; i++) {
             if (i == 0) {
                 System.out.print("   ");
@@ -99,10 +99,14 @@ public class FieldPrinter {
      * @param yCoord      vertical index of player's field line
      */
     private void printDoubleFieldLine(List<Cell> playerField, List<Cell> botField, int yCoord) {
-        System.out.print(ConsoleColors.GREEN_BOLD.color() + yCoord + ConsoleColors.RESET.color() + "\t");
+        String indent = "   ";
+        if (yCoord == 10) {
+            indent = "  ";
+        }
+        System.out.print(ConsoleColors.GREEN_BOLD.color() + yCoord + ConsoleColors.RESET.color() + indent);
         printHumanFieldComponents(playerField, yCoord);
         System.out.print("\t");
-        System.out.print(ConsoleColors.GREEN_BOLD.color() + yCoord + ConsoleColors.RESET.color() + "\t");
+        System.out.print(ConsoleColors.GREEN_BOLD.color() + yCoord + ConsoleColors.RESET.color() + indent);
         printBotFieldComponents(botField, yCoord);
         System.out.println();
     }
